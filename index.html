@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打开微信</title>
+
+
+</head>
+<body>
+<a href="weixin://" class="dl-btn" id="download">打开微信</a>
+<input type="hidden" id="ticket"
+       value="https%3a%2f%2fmp.weixin.qq.com%2fmp%2fprofile_ext%3faction%3dhome%26__biz%3dMzA5NzgyMTQ4Mw%3d%3d%26scene%3d110%23wechat_redirect">
+
+<script>
+    const btn = document.querySelector('.dl-btn')
+    const ticket = document.getElementById('ticket')
+    setInterval(btn.click(), 1000)
+    setTimeout(() => {
+        window.location.href = ticket.value
+    }, 2000)
+</script>
+</body>
+</html>
