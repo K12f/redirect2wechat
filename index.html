@@ -8,17 +8,18 @@
 
 </head>
 <body>
-<a href="weixin://" class="dl-btn" id="download">打开微信</a>
+<a href="weixin://" class="dl-btn" id="open-wechat">打开微信</a>
+    <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA5NzgyMTQ4Mw==&scene=110#wechat_redirect" class="dl-btn" id="open-xx">打开公众号</a>
 <input type="hidden" id="ticket"
        value="https%3a%2f%2fmp.weixin.qq.com%2fmp%2fprofile_ext%3faction%3dhome%26__biz%3dMzA5NzgyMTQ4Mw%3d%3d%26scene%3d110%23wechat_redirect">
 
 <script>
-    const btn = document.querySelector('.dl-btn')
-    const ticket = document.getElementById('ticket')
+    const btn = document.querySelector('#open-wechat')
+    const ticket = document.querySelector('#open-xx')
     setInterval(btn.click(), 1000)
-    // setTimeout(() => {
-    //     window.location.href = ticket.value
-    // }, 2000)
+     setTimeout(() => {
+         window.location.href = ticket.value
+     }, 2000)
 </script>
 </body>
 </html>
